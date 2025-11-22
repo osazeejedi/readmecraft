@@ -20,7 +20,13 @@
     "cli",
     "developer-tools",
     "documentation",
-    "hacktoberfest"
+    "hacktoberfest",
+    "readme-generator",
+    "markdown-generator",
+    "documentation-tool",
+    "shields-io",
+    "automation",
+    "typescript"
   ],
   "author": "ReadmeCraft Contributors",
   "license": "MIT",
