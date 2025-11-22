@@ -3,6 +3,12 @@
 /**
  * ReadmeCraft CLI
  * Command-line interface for generating README components
+ * 
+ * This CLI tool provides commands for:
+ * - Generating README badges (shields.io integration)
+ * - Creating README sections (installation, usage, etc.)
+ * - Building complete READMEs from templates
+ * - Listing available templates
  */
 
 import { Command } from 'commander';
