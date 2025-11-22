@@ -396,6 +396,39 @@ textarea {
     }
 }
 
+/* Error Messages */
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+input.error,
+select.error,
+textarea.error {
+    border-color: #ef4444;
+}
+
+/* Loading Spinner */
+.loading {
+    text-align: center;
+    padding: 3rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    border: 4px solid var(--border-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
 /* Success Animation */
 @keyframes successPulse {
     0%, 100% { transform: scale(1); }
@@ -404,4 +437,19 @@ textarea {
 
 .success-pulse {
     animation: successPulse 0.3s ease;
+}
+
+/* Improved Touch Targets for Mobile */
+@media (max-width: 768px) {
+    .btn {
+        padding: 1rem 1.5rem;
+        min-height: 44px;
+    }
+    
+    input,
+    select,
+    textarea {
+        padding: 0.875rem;
+        min-height: 44px;
+    }
 }

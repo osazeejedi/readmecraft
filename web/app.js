@@ -37,12 +37,60 @@ tabs.forEach(tab => {
     });
 });
 
+// Form Validation Helper
+function showError(inputId, message) {
+    const input = document.getElementById(inputId);
+    const existingError = input.parentElement.querySelector('.error-message');
+    if (existingError) existingError.remove();
+    
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error-message';
+    errorDiv.textContent = message;
+    input.parentElement.appendChild(errorDiv);
+    input.classList.add('error');
+}
+
+function clearErrors(formId) {
+    const form = document.getElementById(formId);
+    form.querySelectorAll('.error-message').forEach(el => el.remove());
+    form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+}
+
+function showLoading(show) {
+    const outputSection = document.getElementById('output-section');
+    if (show) {
+        outputSection.innerHTML = '<div class="loading"><div class="spinner"></div><p>Generating...</p></div>';
+        outputSection.style.display = 'block';
+    }
+}
+
 // Badge Generator
 document.getElementById('badge-form').addEventListener('submit', (e) => {
     e.preventDefault();
+    clearErrors('badge-form');
     
-    const username = document.getElementById('badge-username').value;
-    const repo = document.getElementById('badge-repo').value;
+    const username = document.getElementById('badge-username').value.trim();
+    const repo = document.getElementById('badge-repo').value.trim();
+    
+    // Validation
+    if (!username) {
+        showError('badge-username', 'GitHub username is required');
+        return;
+    }
+    if (!repo) {
+        showError('badge-repo', 'Repository name is required');
+        return;
+    }
+    
+    showLoading(true);
+    
+    // Simulate processing time for better UX
+    setTimeout(() => {
+        generateBadges(username, repo);
+    }, 300);
+});
+
+function generateBadges(username, repo) {
     const packageName = document.getElementById('badge-package').value;
     const license = document.getElementById('badge-license').value;
     
@@ -86,7 +134,7 @@ document.getElementById('badge-form').addEventListener('submit', (e) => {
     }
     
     displayOutput(badges.join('\n'));
-});
+}
 
 // Section Generator
 document.getElementById('section-form').addEventListener('submit', (e) => {
