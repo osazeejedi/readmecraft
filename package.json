@@ -8,9 +8,12 @@
   },
   "scripts": {
     "build": "tsc",
+    "build:fast": "tsc --incremental",
     "dev": "tsc --watch",
     "start": "node dist/cli.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean"
   },
   "keywords": [
     "readme",
