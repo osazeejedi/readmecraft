@@ -32,15 +32,15 @@
         <!-- Badges Tab -->
         <div id="badges-tab" class="tab-content active">
             <h2>Generate Badges</h2>
-            <form id="badge-form" class="form">
+            <form id="badge-form" class="form" aria-label="Badge generation form">
                 <div class="form-group">
                     <label for="badge-username">GitHub Username *</label>
-                    <input type="text" id="badge-username" placeholder="octocat" required>
+                    <input type="text" id="badge-username" placeholder="octocat" required aria-required="true" aria-label="GitHub username">
                 </div>
                 
                 <div class="form-group">
                     <label for="badge-repo">Repository Name *</label>
-                    <input type="text" id="badge-repo" placeholder="my-awesome-project" required>
+                    <input type="text" id="badge-repo" placeholder="my-awesome-project" required aria-required="true" aria-label="Repository name">
                 </div>
                 
                 <div class="form-group">
@@ -72,17 +72,17 @@
                     </div>
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Generate Badges</button>
+                <button type="submit" class="btn btn-primary" aria-label="Generate badges">Generate Badges</button>
             </form>
         </div>
 
         <!-- Sections Tab -->
         <div id="sections-tab" class="tab-content">
             <h2>Generate README Section</h2>
-            <form id="section-form" class="form">
+            <form id="section-form" class="form" aria-label="Section generation form">
                 <div class="form-group">
                     <label for="section-type">Section Type *</label>
-                    <select id="section-type" required>
+                    <select id="section-type" required aria-required="true" aria-label="Select section type">
                         <option value="">Select a section</option>
                         <option value="installation">Installation</option>
                         <option value="usage">Usage</option>
@@ -119,10 +119,10 @@
         <!-- Templates Tab -->
         <div id="templates-tab" class="tab-content">
             <h2>Generate Complete README</h2>
-            <form id="template-form" class="form">
+            <form id="template-form" class="form" aria-label="Template generation form">
                 <div class="form-group">
                     <label for="template-type">Template *</label>
-                    <select id="template-type" required>
+                    <select id="template-type" required aria-required="true" aria-label="Select template type">
                         <option value="simple">Simple - Minimalist README</option>
                         <option value="advanced">Advanced - Comprehensive README</option>
                     </select>
