@@ -411,7 +411,7 @@ SOFTWARE.
 
 ## ⭐ Show Your Support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if this project helped you! Share it with other developers who might find it useful.
 
 ---
 
