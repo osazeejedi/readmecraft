@@ -7,7 +7,7 @@
   ![npm version](https://img.shields.io/npm/v/readmecraft.svg)
   ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript)
   
-  **A powerful CLI and web tool for generating professional README files, badges, and templates**
+  **A powerful CLI and web tool for easily generating professional README files, badges, and templates**
   
   [CLI Documentation](#cli-usage) • [Web App](#web-interface) • [Templates](#templates) • [Contributing](#contributing) • [Discussions](https://github.com/yourusername/readmecraft/discussions)
   
