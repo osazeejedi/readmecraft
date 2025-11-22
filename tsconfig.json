@@ -14,7 +14,11 @@
     "declarationMap": true,
     "sourceMap": true,
     "moduleResolution": "node",
-    "types": ["node"]
+    "types": ["node"],
+    "incremental": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+    "removeComments": true,
+    "noEmitOnError": true
   },
   "include": [
     "src/**/*"
