@@ -1,0 +1,169 @@
+PROMPT:
+I want you to generate a complete GitHub project that helps me unlock multiple GitHub Achievements.
+
+Project Goal
+
+Create a JavaScript/TypeScript project called ReadmeCraft, which is a simple developer tool that generates README sections, badges, and starter templates. The project should be structured in a way that allows me to easily earn achievements like:
+
+Starstruck
+
+Pull Shark
+
+YOLO
+
+Quickdraw
+
+Pair Extraordinaire
+
+Automator
+
+Galaxy Brain
+
+(Optional) Open Sourcerer by adding the hacktoberfest topic
+
+What You Must Generate
+
+Produce the entire repository, including:
+
+1. Full Repo Structure
+readmecraft/
+ ├── README.md
+ ├── package.json
+ ├── tsconfig.json
+ ├── src/
+ │    ├── cli.ts
+ │    ├── generator/
+ │    │     ├── badges.ts
+ │    │     ├── sections.ts
+ │    │     └── templates.ts
+ ├── web/
+ │    ├── index.html
+ │    ├── style.css
+ │    └── app.js
+ ├── templates/
+ │    ├── simple.md
+ │    ├── advanced.md
+ ├── .github/
+ │    ├── workflows/
+ │    │     └── ci.yml
+ │    ├── ISSUE_TEMPLATE.md
+ │    ├── PULL_REQUEST_TEMPLATE.md
+ │    └── discussions.md
+
+2. Files to Fully Implement
+README.md
+
+Clear explanation of:
+
+What ReadmeCraft does
+
+How to install and use
+
+CLI usage
+
+Web usage
+
+Screenshots
+
+Contribution guide
+
+Link to Discussions
+
+Roadmap
+
+CLI Code (TypeScript)
+
+A small tool that:
+
+Generates badges
+
+Generates README sections
+
+Allows template selection
+
+Outputs to console or file
+
+Web App
+
+A simple webpage that:
+
+Lets users create README sections
+
+Copies output to clipboard
+
+Has light/dark mode
+
+Uses vanilla HTML/CSS/JS
+
+Templates Folder
+
+Include multiple README templates.
+
+GitHub Action Workflow
+
+A minimal working action:
+
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install
+        run: npm install
+      - name: Type Check
+        run: npm run build
+
+3. Add Rituals to Trigger GitHub Achievements
+Pull Shark
+
+Generate 5 separate PR descriptions that the user can open and merge.
+
+YOLO
+
+Generate a PR meant to be merged without review.
+
+Quickdraw
+
+Generate a PR meant to be immediately opened and closed.
+
+Pair Extraordinaire
+
+Provide a commit message example including:
+
+Co-authored-by: Full Name <email@example.com>
+
+Galaxy Brain
+
+Provide a Discussion topic and accepted-answer script.
+
+Starstruck
+
+Add a launch snippet to share on Twitter/LinkedIn/WhatsApp to get stars.
+
+Open Sourcerer
+
+Add instructions to include repo topic: hacktoberfest.
+
+4. Deliverables
+
+Return everything as:
+
+The full repo
+
+All code files
+
+All templates
+
+All workflow files
+
+All PR templates
+
+All Discussions seeds
+
+All suggested PRs
+
+All commit messages
+
+Make it production-ready, beautifully formatted, well-commented, and easy to copy into a GitHub repository.

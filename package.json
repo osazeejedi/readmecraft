@@ -1,0 +1,46 @@
+{
+  "name": "readmecraft",
+  "version": "1.0.0",
+  "description": "A powerful CLI and web tool for generating README sections, badges, and starter templates",
+  "main": "dist/cli.js",
+  "bin": {
+    "readmecraft": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "readme",
+    "generator",
+    "markdown",
+    "badges",
+    "cli",
+    "developer-tools",
+    "documentation",
+    "hacktoberfest"
+  ],
+  "author": "ReadmeCraft Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/readmecraft.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/readmecraft/issues"
+  },
+  "homepage": "https://github.com/yourusername/readmecraft#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ReadmeCraft - Generate README sections, badges, and templates instantly">
+    <title>ReadmeCraft - README Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">📝</span>
+                <h1>ReadmeCraft</h1>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </header>
+
+        <p class="subtitle">Generate professional README sections, badges, and templates in seconds</p>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="badges">🎨 Badges</button>
+            <button class="tab" data-tab="sections">📄 Sections</button>
+            <button class="tab" data-tab="templates">🚀 Templates</button>
+        </div>
+
+        <!-- Badges Tab -->
+        <div id="badges-tab" class="tab-content active">
+            <h2>Generate Badges</h2>
+            <form id="badge-form" class="form">
+                <div class="form-group">
+                    <label for="badge-username">GitHub Username *</label>
+                    <input type="text" id="badge-username" placeholder="octocat" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="badge-repo">Repository Name *</label>
+                    <input type="text" id="badge-repo" placeholder="my-awesome-project" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="badge-package">NPM Package Name</label>
+                    <input type="text" id="badge-package" placeholder="my-package (optional)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="badge-license">License</label>
+                    <select id="badge-license">
+                        <option value="">Select license</option>
+                        <option value="MIT">MIT</option>
+                        <option value="Apache-2.0">Apache 2.0</option>
+                        <option value="GPL-3.0">GPL 3.0</option>
+                        <option value="BSD-3-Clause">BSD 3-Clause</option>
+                        <option value="ISC">ISC</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Languages</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="language" value="TypeScript"> TypeScript</label>
+                        <label><input type="checkbox" name="language" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="language" value="Python"> Python</label>
+                        <label><input type="checkbox" name="language" value="Java"> Java</label>
+                        <label><input type="checkbox" name="language" value="Go"> Go</label>
+                        <label><input type="checkbox" name="language" value="Rust"> Rust</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Generate Badges</button>
+            </form>
+        </div>
+
+        <!-- Sections Tab -->
+        <div id="sections-tab" class="tab-content">
+            <h2>Generate README Section</h2>
+            <form id="section-form" class="form">
+                <div class="form-group">
+                    <label for="section-type">Section Type *</label>
+                    <select id="section-type" required>
+                        <option value="">Select a section</option>
+                        <option value="installation">Installation</option>
+                        <option value="usage">Usage</option>
+                        <option value="features">Features</option>
+                        <option value="contributing">Contributing</option>
+                        <option value="license">License</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="section-name">Project Name *</label>
+                    <input type="text" id="section-name" placeholder="my-project" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="section-description">Description</label>
+                    <input type="text" id="section-description" placeholder="A great project">
+                </div>
+                
+                <div class="form-group">
+                    <label for="section-author">Author</label>
+                    <input type="text" id="section-author" placeholder="Your Name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="section-repo">Repository URL</label>
+                    <input type="url" id="section-repo" placeholder="https://github.com/user/repo">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Generate Section</button>
+            </form>
+        </div>
+
+        <!-- Templates Tab -->
+        <div id="templates-tab" class="tab-content">
+            <h2>Generate Complete README</h2>
+            <form id="template-form" class="form">
+                <div class="form-group">
+                    <label for="template-type">Template *</label>
+                    <select id="template-type" required>
+                        <option value="simple">Simple - Minimalist README</option>
+                        <option value="advanced">Advanced - Comprehensive README</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="template-name">Project Name *</label>
+                    <input type="text" id="template-name" placeholder="my-awesome-project" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="template-description">Description *</label>
+                    <textarea id="template-description" rows="3" placeholder="A brief description of your project" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="template-author">Author</label>
+                    <input type="text" id="template-author" placeholder="Your Name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="template-repo">Repository URL</label>
+                    <input type="url" id="template-repo" placeholder="https://github.com/user/repo">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Generate README</button>
+            </form>
+        </div>
+
+        <!-- Output Section -->
+        <div id="output-section" class="output-section" style="display: none;">
+            <div class="output-header">
+                <h3>Generated Output</h3>
+                <button id="copy-btn" class="btn btn-secondary">📋 Copy to Clipboard</button>
+            </div>
+            <pre id="output-content" class="output-content"></pre>
+            <div class="output-preview">
+                <h3>Preview</h3>
+                <div id="preview-content" class="preview-content"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with ❤️ by ReadmeCraft Contributors | 
+            <a href="https://github.com/yourusername/readmecraft" target="_blank">GitHub</a> | 
+            <a href="https://github.com/yourusername/readmecraft/blob/main/LICENSE" target="_blank">MIT License</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
