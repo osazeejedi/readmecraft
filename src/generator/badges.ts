@@ -96,6 +96,27 @@ export function generateLanguageBadges(languages: string[]): string {
 }
 
 /**
+ * Generates a security audit badge
+ */
+export function generateSecurityBadge(username: string, repo: string): string {
+  return `![Security](https://img.shields.io/snyk/vulnerabilities/github/${username}/${repo}.svg)`;
+}
+
+/**
+ * Generates a package size badge
+ */
+export function generatePackageSizeBadge(packageName: string): string {
+  return `![Package Size](https://img.shields.io/bundlephobia/minzip/${packageName}.svg)`;
+}
+
+/**
+ * Generates a code quality badge
+ */
+export function generateCodeQualityBadge(username: string, repo: string): string {
+  return `![Code Quality](https://img.shields.io/codacy/grade/${username}/${repo}.svg)`;
+}
+
+/**
  * Generates a complete badge set for a project
  */
 export function generateBadgeSet(config: {
